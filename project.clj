@@ -5,4 +5,7 @@
   :ring {:handler mtg-sdk.handler/app}
   :uberjar-name "server.jar"
   :profiles {:dev {:dependencies [[javax.servlet/javax.servlet-api "3.1.0"]]
-                   :plugins [[lein-ring "0.10.0"]]}})
+                   :plugins [[lein-ring "0.10.0"]]}}
+  :license {:name "MIT License"
+            :url "http://www.opensource.org/licenses/mit-license.php"
+            :distribution :manual})
