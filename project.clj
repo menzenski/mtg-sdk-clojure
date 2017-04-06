@@ -1,5 +1,5 @@
 (defproject mtg-sdk "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
+  :description "API for Magic: the Gathering card information"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [metosin/compojure-api "1.1.10"]]
   :ring {:handler mtg-sdk.handler/app}
