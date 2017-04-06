@@ -1,5 +1,7 @@
 (defproject mtg-sdk "0.1.0-SNAPSHOT"
   :description "API for Magic: the Gathering card information"
+  :url "https://github.com/menzenski/mtg-sdk-clojure"
+  :author "Matt Menzenski"
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [metosin/compojure-api "1.1.10"]]
   :ring {:handler mtg-sdk.handler/app}
