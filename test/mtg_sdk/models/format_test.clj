@@ -1,13 +1,10 @@
-(ns mtg-sdk.models.format_test
-  (:use [clojure.test])
-  (:require [schema.core :as s]
-            [mtg-sdk.models.format :as f]))
+(in-ns 'mtg-sdk.mtg-models-test)
 
 (deftest format-test
   (testing "string format is valid"
-    (is (s/validate f/Format "Theros Block"))
-    (is (s/validate f/Format "Zendikar Block"))
-    (is (s/validate f/Format "Commander")))
+    (is (s/validate models/Format "Theros Block"))
+    (is (s/validate models/Format "Zendikar Block"))
+    (is (s/validate models/Format "Commander")))
   (testing "non-string format throws an exception"
-    (is (thrown? Exception (s/validate f/Format (hash-map))))
-    (is (thrown? Exception (s/validate f/Format {:name "not a string"})))))
+    (is (thrown? Exception (s/validate models/Format (hash-map))))
+    (is (thrown? Exception (s/validate models/Format {:name "not a string"})))))

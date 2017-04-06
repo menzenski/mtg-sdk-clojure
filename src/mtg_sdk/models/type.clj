@@ -1,3 +1,3 @@
 (in-ns 'mtg-sdk.mtg-models)
 
-(s/def Format s/Str)
+(s/def Type s/Str)
