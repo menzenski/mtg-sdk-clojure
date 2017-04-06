@@ -3,4 +3,5 @@
   (:gen-class))
 
 (load "models/format")
+(load "models/supertype")
 (load "models/type")

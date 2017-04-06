@@ -5,4 +5,5 @@
   (:gen-class))
 
 (load "models/format_test")
+(load "models/supertype_test")
 (load "models/type_test")
