@@ -4,6 +4,7 @@
             [mtg-sdk.mtg-models :as models])
   (:gen-class))
 
+(load "models/booster_test")
 (load "models/format_test")
 (load "models/subtype_test")
 (load "models/supertype_test")
