@@ -6,7 +6,11 @@
   (:gen-class))
 
 (load "models/booster_test")
+(load "models/card_test")
+(load "models/foreigncardname_test")
 (load "models/format_test")
+(load "models/legality_test")
+(load "models/ruling_test")
 (load "models/set_test")
 (load "models/subtype_test")
 (load "models/supertype_test")
