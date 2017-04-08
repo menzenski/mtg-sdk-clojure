@@ -1,4 +1,4 @@
-(defproject mtg-sdk "0.1.0-SNAPSHOT"
+(defproject mtg-sdk "0.0.1-alpha"
   :description "API for Magic: the Gathering card information"
   :url "https://github.com/menzenski/mtg-sdk-clojure"
   :author "Matt Menzenski"
