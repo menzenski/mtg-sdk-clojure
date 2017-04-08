@@ -3,6 +3,7 @@
   :url "https://github.com/menzenski/mtg-sdk-clojure"
   :author "Matt Menzenski"
   :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/data.json "0.2.6"]
                  [metosin/compojure-api "1.1.10"]]
   :ring {:handler mtg-sdk.handler/app}
   :uberjar-name "server.jar"
