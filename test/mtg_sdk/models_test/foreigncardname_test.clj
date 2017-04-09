@@ -1,8 +1,4 @@
-(ns mtg-sdk.models-test
-  (:use [clojure.test])
-  (:require [schema.core :as s]
-            [mtg-sdk.mtg-models :as models]
-            [clojure.data.json :as json]))
+(in-ns 'mtg-sdk.models-test)
 
 (deftest foreign-card-name-test
   (let [valid-json-fcn (str "{\"name\":\"\u4E07\u548C\u7434\",\"imageUrl\":"

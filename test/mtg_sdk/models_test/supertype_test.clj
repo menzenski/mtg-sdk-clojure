@@ -1,8 +1,4 @@
-(ns mtg-sdk.models-test
-  (:use [clojure.test])
-  (:require [schema.core :as s]
-            [mtg-sdk.mtg-models :as models]
-            [clojure.data.json :as json]))
+(in-ns 'mtg-sdk.models-test)
 
 (deftest supertype-test
   (testing "string supertype is valid"
