@@ -1,4 +1,5 @@
-(in-ns 'mtg-sdk.mtg-models)
+(ns mtg-sdk.models
+  (:require [schema.core :as s]))
 
 (s/defschema Legality
   {:format s/Str

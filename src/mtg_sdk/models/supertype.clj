@@ -1,3 +1,4 @@
-(in-ns 'mtg-sdk.mtg-models)
+(ns mtg-sdk.models
+  (:require [schema.core :as s]))
 
 (s/def Supertype s/Str)
