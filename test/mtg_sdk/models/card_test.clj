@@ -1,4 +1,9 @@
-(in-ns 'mtg-sdk.models-test)
+(ns mtg-sdk.models.card-test
+  (:use [clojure.test])
+  (:require [clojure.data.json :as json]
+            [schema.core :as s]
+            [mtg-sdk.models :refer [Card]])
+  (:gen-class))
 
 (deftest card-test
   (let [valid-json-card (str "{\"name\":\"Narnam Cobra\",\"manaCost\":\"{2}\","
@@ -74,4 +79,4 @@
                              "\"id\":\"940788fd95ff81af51cbb0897440d2c26f34646b\"}")
         valid-card (json/read-str valid-json-card :key-fn keyword)]
     (testing "valid card is valid"
-      (is (s/validate models/Card valid-card)))))
+      (is (s/validate Card valid-card)))))

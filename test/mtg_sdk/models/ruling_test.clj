@@ -1,4 +1,9 @@
-(in-ns 'mtg-sdk.models-test)
+(ns mtg-sdk.models.ruling-test
+  (:use [clojure.test])
+  (:require [clojure.data.json :as json]
+            [schema.core :as s]
+            [mtg-sdk.models :refer [Ruling]])
+  (:gen-class))
 
 (deftest ruling-test
   (let [valid-json-ruling (str "{\"date\":\"2016-09-20\",\"text\":\"Panharmonicon "
@@ -10,8 +15,8 @@
                                "\\\"whenever.\\\"\"}")
         valid-ruling (json/read-str valid-json-ruling :key-fn keyword)]
     (testing "valid ruling object is valid"
-      (is (s/validate models/Ruling valid-ruling)))
+      (is (s/validate Ruling valid-ruling)))
     (testing "invalid ruling object is invalid"
-      (is (thrown? Exception (s/validate models/Ruling (dissoc valid-ruling :date))))
-      (is (thrown? Exception (s/validate models/Ruling (dissoc valid-ruling :text)))))))
+      (is (thrown? Exception (s/validate Ruling (dissoc valid-ruling :date))))
+      (is (thrown? Exception (s/validate Ruling (dissoc valid-ruling :text)))))))
 

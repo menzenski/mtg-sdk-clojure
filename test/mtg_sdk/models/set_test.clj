@@ -1,4 +1,9 @@
-(in-ns 'mtg-sdk.models-test)
+(ns mtg-sdk.models.set-test
+  (:use [clojure.test])
+  (:require [clojure.data.json :as json]
+            [schema.core :as s]
+            [mtg-sdk.models :refer [Set]])
+  (:gen-class))
 
 (deftest mtg-set-test
   (let [valid-json-set (str "{\"code\":\"ICE\",\"name\":\"Ice Age\",\"type\":"
@@ -13,16 +18,16 @@
                             "\"Ice Age\"}")
         valid-set (json/read-str valid-json-set :key-fn keyword)]
     (testing "an older valid set is valid"
-      (is (s/validate models/Set valid-set)))
+      (is (s/validate Set valid-set)))
     (testing "optional fields are optional"
-      (is (s/validate models/Set (dissoc valid-set :block)))
-      (is (s/validate models/Set (dissoc valid-set :booster))))
+      (is (s/validate Set (dissoc valid-set :block)))
+      (is (s/validate Set (dissoc valid-set :booster))))
     (testing "an older invalid set throws an exception"
-      (is (thrown? Exception (s/validate models/Set (dissoc valid-set :border))))
-      (is (thrown? Exception (s/validate models/Set (dissoc valid-set :code))))
-      (is (thrown? Exception (s/validate models/Set (dissoc valid-set :name))))
-      (is (thrown? Exception (s/validate models/Set (dissoc valid-set :releaseDate))))
-      (is (thrown? Exception (s/validate models/Set (dissoc valid-set :type))))))
+      (is (thrown? Exception (s/validate Set (dissoc valid-set :border))))
+      (is (thrown? Exception (s/validate Set (dissoc valid-set :code))))
+      (is (thrown? Exception (s/validate Set (dissoc valid-set :name))))
+      (is (thrown? Exception (s/validate Set (dissoc valid-set :releaseDate))))
+      (is (thrown? Exception (s/validate Set (dissoc valid-set :type))))))
   (let [valid-json-set (str "{\"code\":\"AER\",\"name\":\"Aether Revolt\","
                             "\"type\":\"expansion\",\"border\":\"black\","
                             "\"booster\":[[\"rare\",\"mythic rare\"],"
@@ -34,6 +39,6 @@
                             "\"Kaladesh\"}")
         valid-set (json/read-str valid-json-set :key-fn keyword)]
     (testing "a newer valid set is valid"
-      (is (s/validate models/Set valid-set)))
+      (is (s/validate Set valid-set)))
     (testing "a newer invalid set throws an exception"
-      (is (thrown? Exception (s/validate models/Set (dissoc valid-set :name)))))))
+      (is (thrown? Exception (s/validate Set (dissoc valid-set :name)))))))
