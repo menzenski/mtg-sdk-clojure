@@ -1,4 +1,8 @@
-(in-ns 'mtg-sdk.mtg-models-test)
+(ns mtg-sdk.models-test
+  (:use [clojure.test])
+  (:require [schema.core :as s]
+            [mtg-sdk.mtg-models :as models]
+            [clojure.data.json :as json]))
 
 (deftest subtype-test
   (testing "string subtype is valid"
