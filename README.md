@@ -1,24 +1,5 @@
-# mtg-sdk
+# Magic: The Gathering SDK
 
-FIXME
+[![Build Status](https://travis-ci.org/menzenski/mtg-sdk-clojure.svg?branch=master)](https://travis-ci.org/menzenski/mtg-sdk-clojure)
 
-## Usage
-
-### Run the application locally
-
-`lein ring server`
-
-### Packaging and running as standalone jar
-
-```
-lein do clean, ring uberjar
-java -jar target/server.jar
-```
-
-### Packaging as war
-
-`lein ring uberwar`
-
-## License
-
-Copyright ©  FIXME
+A Clojure wrapper around the Magic: The Gathering API at [magicthegathering.io](http://magicthegathering.io/).
