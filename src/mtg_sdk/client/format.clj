@@ -7,4 +7,4 @@
   (format "%s/formats" base-url))
 
 (defn get-all []
-  (-> formats-url client/get :body parse-data))
+  (-> formats-url client/get :body parse-data :formats))
