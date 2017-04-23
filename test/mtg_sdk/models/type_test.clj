@@ -2,8 +2,7 @@
   (:use [clojure.test])
   (:require [clojure.data.json :as json]
             [schema.core :as s]
-            [mtg-sdk.models :refer [Type]])
-  (:gen-class))
+            [mtg-sdk.models :refer [Type]]))
 
 (deftest type-test
   (testing "string type is valid"

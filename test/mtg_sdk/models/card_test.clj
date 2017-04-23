@@ -2,8 +2,7 @@
   (:use [clojure.test])
   (:require [clojure.data.json :as json]
             [schema.core :as s]
-            [mtg-sdk.models :refer [Card]])
-  (:gen-class))
+            [mtg-sdk.models :refer [Card]]))
 
 (deftest card-test
   (let [valid-json-card (str "{\"name\":\"Narnam Cobra\",\"manaCost\":\"{2}\","

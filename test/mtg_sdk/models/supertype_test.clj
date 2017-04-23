@@ -2,8 +2,7 @@
   (:use [clojure.test])
   (:require [clojure.data.json :as json]
             [schema.core :as s]
-            [mtg-sdk.models :refer [Supertype]])
-  (:gen-class))
+            [mtg-sdk.models :refer [Supertype]]))
 
 (deftest supertype-test
   (testing "string supertype is valid"

@@ -1,8 +1,7 @@
 (ns mtg-sdk.util-test
   (:use [clojure.test])
   (:require [clojure.data.json :as json]
-            [mtg-sdk.util :refer [parse-data]])
-  (:gen-class))
+            [mtg-sdk.util :refer [parse-data]]))
 
 (deftest parse-data-test
   (testing "json response is parsed with keys as keywords"

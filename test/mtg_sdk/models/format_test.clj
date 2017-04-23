@@ -2,8 +2,7 @@
   (:use [clojure.test])
   (:require [clojure.data.json :as json]
             [schema.core :as s]
-            [mtg-sdk.models :refer [Format]])
-  (:gen-class))
+            [mtg-sdk.models :refer [Format]]))
 
 (deftest format-test
   (testing "string format is valid"

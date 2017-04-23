@@ -2,8 +2,7 @@
   (:use [clojure.test])
   (:require [clojure.data.json :as json]
             [schema.core :as s]
-            [mtg-sdk.models :refer [Booster]])
-  (:gen-class))
+            [mtg-sdk.models :refer [Booster]]))
 
 (deftest booster-test
   (let [valid-booster [["rare" "mythic rare"]
