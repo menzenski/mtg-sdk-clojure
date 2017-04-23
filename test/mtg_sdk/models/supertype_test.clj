@@ -1,10 +1,15 @@
-(in-ns 'mtg-sdk.mtg-models-test)
+(ns mtg-sdk.models.supertype-test
+  (:use [clojure.test])
+  (:require [clojure.data.json :as json]
+            [schema.core :as s]
+            [mtg-sdk.models :refer [Supertype]])
+  (:gen-class))
 
 (deftest supertype-test
   (testing "string supertype is valid"
-    (is (s/validate models/Supertype "Basic"))
-    (is (s/validate models/Supertype "Legendary"))
-    (is (s/validate models/Supertype "Snow")))
+    (is (s/validate Supertype "Basic"))
+    (is (s/validate Supertype "Legendary"))
+    (is (s/validate Supertype "Snow")))
   (testing "non-string supertype throws an exception"
-    (is (thrown? Exception (s/validate models/Supertype (hash-map))))
-    (is (thrown? Exception (s/validate models/Supertype {:name "not a string"})))))
+    (is (thrown? Exception (s/validate Supertype (hash-map))))
+    (is (thrown? Exception (s/validate Supertype {:name "not a string"})))))

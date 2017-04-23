@@ -1,10 +1,15 @@
-(in-ns 'mtg-sdk.mtg-models-test)
+(ns mtg-sdk.models.subtype-test
+  (:use [clojure.test])
+  (:require [clojure.data.json :as json]
+            [schema.core :as s]
+            [mtg-sdk.models :refer [Subtype]])
+  (:gen-class))
 
 (deftest subtype-test
   (testing "string subtype is valid"
-    (is (s/validate models/Subtype "Basic"))
-    (is (s/validate models/Subtype "Legendary"))
-    (is (s/validate models/Subtype "Snow")))
+    (is (s/validate Subtype "Basic"))
+    (is (s/validate Subtype "Legendary"))
+    (is (s/validate Subtype "Snow")))
   (testing "non-string subtype throws an exception"
-    (is (thrown? Exception (s/validate models/Subtype (hash-map))))
-    (is (thrown? Exception (s/validate models/Subtype {:name "not a string"})))))
+    (is (thrown? Exception (s/validate Subtype (hash-map))))
+    (is (thrown? Exception (s/validate Subtype {:name "not a string"})))))
