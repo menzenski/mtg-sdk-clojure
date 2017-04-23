@@ -2,8 +2,7 @@
   (:use [clojure.test])
   (:require [clojure.data.json :as json]
             [schema.core :as s]
-            [mtg-sdk.models :refer [ForeignCardName]])
-  (:gen-class))
+            [mtg-sdk.models :refer [ForeignCardName]]))
 
 (deftest foreign-card-name-test
   (let [valid-json-fcn (str "{\"name\":\"\u4E07\u548C\u7434\",\"imageUrl\":"

@@ -2,8 +2,7 @@
   (:use [clojure.test])
   (:require [clojure.data.json :as json]
             [schema.core :as s]
-            [mtg-sdk.models :refer [Ruling]])
-  (:gen-class))
+            [mtg-sdk.models :refer [Ruling]]))
 
 (deftest ruling-test
   (let [valid-json-ruling (str "{\"date\":\"2016-09-20\",\"text\":\"Panharmonicon "

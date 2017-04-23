@@ -2,8 +2,7 @@
   (:use [clojure.test])
   (:require [clojure.data.json :as json]
             [schema.core :as s]
-            [mtg-sdk.models :refer [Legality]])
-  (:gen-class))
+            [mtg-sdk.models :refer [Legality]]))
 
 (deftest legality-test
   (let [valid-json-legality (str "{\"format\":\"Kaladesh Block\",\"legality\":\"Legal\"}")

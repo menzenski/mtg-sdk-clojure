@@ -2,8 +2,7 @@
   (:use [clojure.test])
   (:require [clojure.data.json :as json]
             [schema.core :as s]
-            [mtg-sdk.models :refer [Set]])
-  (:gen-class))
+            [mtg-sdk.models :refer [Set]]))
 
 (deftest mtg-set-test
   (let [valid-json-set (str "{\"code\":\"ICE\",\"name\":\"Ice Age\",\"type\":"

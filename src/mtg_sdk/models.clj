@@ -1,6 +1,5 @@
 (ns mtg-sdk.models
-  (:require [schema.core :as s])
-  (:gen-class))
+  (:require [schema.core :as s]))
 
 
 ;; ---------------------------------------------
