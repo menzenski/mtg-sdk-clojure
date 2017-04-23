@@ -13,4 +13,3 @@
 (s/defn get-all :- [[Subtype]]
   []
   (-> subtypes-url client/get :body parse-data result-property))
-
